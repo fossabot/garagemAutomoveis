@@ -1,0 +1,14 @@
+D:\Projetos\Betha\projetoTecnico\reservaAutomoveis\ReservaAutomoveis-ejb\src\main\java\br\com\felipebatista\reservaautomoveis\model\Automovel.java
+D:\Projetos\Betha\projetoTecnico\reservaAutomoveis\ReservaAutomoveis-ejb\src\main\java\br\com\felipebatista\reservaautomoveis\model\Marca.java
+D:\Projetos\Betha\projetoTecnico\reservaAutomoveis\ReservaAutomoveis-ejb\src\main\java\br\com\felipebatista\reservaautomoveis\service\AutomovelRepository.java
+D:\Projetos\Betha\projetoTecnico\reservaAutomoveis\ReservaAutomoveis-ejb\src\main\java\br\com\felipebatista\reservaautomoveis\specification\AutomoveisSpecification.java
+D:\Projetos\Betha\projetoTecnico\reservaAutomoveis\ReservaAutomoveis-ejb\src\main\java\br\com\felipebatista\reservaautomoveis\util\Resource.java
+D:\Projetos\Betha\projetoTecnico\reservaAutomoveis\ReservaAutomoveis-ejb\src\main\java\br\com\felipebatista\reservaautomoveis\specification\ISpecification.java
+D:\Projetos\Betha\projetoTecnico\reservaAutomoveis\ReservaAutomoveis-ejb\src\main\java\br\com\felipebatista\reservaautomoveis\model\Entidade.java
+D:\Projetos\Betha\projetoTecnico\reservaAutomoveis\ReservaAutomoveis-ejb\src\main\java\br\com\felipebatista\reservaautomoveis\util\ResponseException.java
+D:\Projetos\Betha\projetoTecnico\reservaAutomoveis\ReservaAutomoveis-ejb\src\main\java\br\com\felipebatista\reservaautomoveis\util\GenericValidation.java
+D:\Projetos\Betha\projetoTecnico\reservaAutomoveis\ReservaAutomoveis-ejb\src\main\java\br\com\felipebatista\reservaautomoveis\specification\MarcasSpecification.java
+D:\Projetos\Betha\projetoTecnico\reservaAutomoveis\ReservaAutomoveis-ejb\src\main\java\br\com\felipebatista\reservaautomoveis\model\DisponibilidadeAutomovel.java
+D:\Projetos\Betha\projetoTecnico\reservaAutomoveis\ReservaAutomoveis-ejb\src\main\java\br\com\felipebatista\reservaautomoveis\exceptions\MarcaException.java
+D:\Projetos\Betha\projetoTecnico\reservaAutomoveis\ReservaAutomoveis-ejb\src\main\java\br\com\felipebatista\reservaautomoveis\service\MarcaRepository.java
+D:\Projetos\Betha\projetoTecnico\reservaAutomoveis\ReservaAutomoveis-ejb\src\main\java\br\com\felipebatista\reservaautomoveis\exceptions\AutomovelException.java

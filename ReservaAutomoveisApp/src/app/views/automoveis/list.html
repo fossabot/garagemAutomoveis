@@ -1,0 +1,75 @@
+<div class="container-fluid">
+    <nav class="navbar navbar-light bg-light">
+        <form class="form-inline" ng-submit="vm.load()">
+            <!--<input ng-model="vm.filterValue" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar"> -->
+            <input ng-model="searchText" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Atualizar lista</button>
+        </form>
+        <a class="btn btn-outline-info" ui-sref="automovel.new">Novo registro</a>
+    </nav>
+    <table class="table table-striped text-center">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Ano</th>
+                <th scope="col">Marca</th>
+                <th scope="col">Modelo</th>
+                <th scope="col">Cor</th>
+                <th scope="col">Placa</th>
+                <th scope="col">Disponibilidade</th>
+                <th scope="col">Pessoa</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="rec in vm.record.conteudo|filter:searchText">
+                <th scope="row">{{rec.id}}</th>
+                <td>{{rec.ano}}</td>
+                <td>{{rec.marca.marca}}</td>
+                <td>{{rec.marca.modelo}}</td>
+                <td>{{rec.cor}}</td>
+                <td>{{rec.placa}}</td>                
+                <td ng-if="rec.disponibilidade == 'RESERVADO'">Reservado</td>
+                <td ng-if="rec.disponibilidade == 'DISPONIVEL'">Disponível</td>
+                <td>{{rec.pessoa}}</td>                
+                <td style="text-align: right">                
+                    <a class="btn btn-sm btn-info" ng-if="rec.disponibilidade == 'DISPONIVEL'" ui-sref="automovel.reserva({id: rec.id})">Reservar</a>
+                    <button ng-click="vm.liberar(rec)" ng-if="rec.disponibilidade == 'RESERVADO'" class="btn btn-sm btn-secondary" type="button">Liberar</button>
+                    <a class="btn btn-sm btn-success" ui-sref="automovel.edit({id: rec.id})">Editar</a>
+                    <button ng-click="vm.excluir(rec.id)" class="btn btn-sm btn-danger" type="button">Excluir</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>   
+</div>
+<div class="jumbotron">
+    <tfoot>
+
+        <div class="row align-items-start">
+            <div class="col">
+                <div class="col-sm-auto">Total de veículos: </div>
+            </div>
+            <div class="col">
+                <div class="col-sm-auto" ng-bind="vm.record.qtdeTotal"></div>
+            </div>
+        </div>
+
+        <div class="row align-items-start">
+            <div class="col">
+                <div class="col-sm-auto">Veículos disponívels: </div>
+            </div>
+            <div class="col">
+                <div class="col-sm-auto" ng-bind="vm.record.qtdeDisponivel"></div>
+            </div>
+        </div>
+        <div class="row align-items-end">
+            <div class="col">
+                <div class="col-sm-auto">Veículos reservados: </div>
+            </div>
+            <div class="col">
+                <div class="col-sm-auto" ng-bind="vm.record.qtdeReservada"></div>
+            </div>
+        </div>
+
+    </tfoot>
+</div>
+</div>

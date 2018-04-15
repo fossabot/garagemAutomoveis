@@ -1,0 +1,68 @@
+<div class="container-fluid">
+    <div class="row justify-content-sm-center">
+        <div class="col-sm-8">
+            <h2 class="title">{{vm.title}}</h2>
+            <form name="automovelForm">               
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-4">
+                            <div ng-show="automovelForm.ano.$invalid && automovelForm.ano.$dirty" class="alert alert-danger">
+                                Por favor preencha o ano!
+                            </div>
+                            <label>Ano</label>
+                            <input ng-required="true" ng-minlength="4" size="4"  ng-maxlength="4" maxlength="4" "ano" type="text" size="4" ng-model="vm.record.ano" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-4">                            
+                            <label>Modelo
+                                <span ng-show="automovelForm.modelo.$invalid && automovelForm.modelo.$dirty" class="alert alert-danger">
+                                    *
+                                </span>
+                            </label>
+                            <select class="form-control" name="modelo" ng-required="true" ng-model="vm.record.marca" ng-options="marca as marca.modelo for marca in vm.marcas track by marca.modelo">
+                                <option value="">Selecione um modelo de veículo...</option>
+                            </select>
+                        </div>
+                        <div class="col-4">
+                            <label>Marca</label>
+                            <input type="text" ng-disabled="true" ng-model="vm.record.marca.marca" class="form-control">
+                        </div>
+                        <div class="col-4">
+                            <label>Cor</label>
+                            <input type="text" ng-disabled="false" ng-model="vm.record.cor" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col">
+                                <div ng-show="automovelForm.placa.$invalid && automovelForm.placa.$dirty" class="alert alert-danger">
+                                        Por favor preencha a placa!
+                                    </div>
+                            <label>Placa</label>
+                            <input type="text" ui-placa  maxlength="8" name="placa" ng-required="true" size="4" ng-model="vm.record.placa" class="form-control">
+                        </div>
+                        <div class="col">
+                            <label>Renavan</label>
+                            <input type="text" size="4" maxlength="11" ng-model="vm.record.renavan" class="form-control">
+                        </div>
+                        <div class="col">
+                            <label>Chassi</label>
+                            <input type="text" size="4" maxlength="17" ng-model="vm.record.chassi" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <button ng-click="vm.save()" type="button" ng-disabled="!vm.record.marca || !vm.record.placa" class="btn btn-primary btn-lg">Salvar Registro</button>
+                <a ui-sref="automovel.list" class="btn btn-danger">Cancelar</a>
+            </form>
+        </div>
+    </div>
+</div>

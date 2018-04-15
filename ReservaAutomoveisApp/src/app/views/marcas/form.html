@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <div class="row justify-content-sm-center">
+        <div class="col-sm-8">
+            <h2 class="title">{{vm.title}}</h2>
+            <form name="marcasForm">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col">
+                            <label>Marca</label>
+                            <input type="text" maxlength="50" ng-model="vm.record.marca" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label>Modelo</label>
+                            <input type="text" maxlength="50" ng-model="vm.record.modelo" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <button ng-click="vm.save()" type="button" class="btn btn-primary btn-lg">Salvar Registro</button>
+                <a ui-sref="marca.list" class="btn btn-danger">Cancelar</a>
+            </form>
+        </div>
+    </div>
+</div>
